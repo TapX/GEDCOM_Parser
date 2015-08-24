@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEDCOM_Parser", "GEDCOM_Parser\GEDCOM_Parser.csproj", "{F7BC74C0-97BA-476C-841E-0517C2B6CD50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEDCOM_Parser.Tests", "GEDCOM_Parser.Tests\GEDCOM_Parser.Tests.csproj", "{466E760C-4921-4731-94BA-81B800AC74F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7BC74C0-97BA-476C-841E-0517C2B6CD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BC74C0-97BA-476C-841E-0517C2B6CD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BC74C0-97BA-476C-841E-0517C2B6CD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BC74C0-97BA-476C-841E-0517C2B6CD50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{466E760C-4921-4731-94BA-81B800AC74F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466E760C-4921-4731-94BA-81B800AC74F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466E760C-4921-4731-94BA-81B800AC74F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466E760C-4921-4731-94BA-81B800AC74F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

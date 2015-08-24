@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Query";
+}
+
+<!--
+  The View for the Query Page. Loads some nice images and other frills, then outputs all of the relevant information for whichever
+    submitter, individual or family the user has selected.
+  -->
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title Page</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<h2>Query Result</h2>
+
+@for (int i = 0; i < ViewBag.Heading.Count; i++)
+{
+    <h3>@Html.Raw(ViewBag.Heading[i])</h3>
+    <pre>@Html.Raw(ViewBag.Content[i])</pre>
+    <br/>
+}
+
+<a href="/Display">Go back to results</a>

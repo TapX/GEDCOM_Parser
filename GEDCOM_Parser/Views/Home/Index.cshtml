@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<!--
+  The View for the Home Page. Loads some nice images and other frills, then provides the link to the Upload Page.
+  -->
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title Page</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<h2>Making discovering your genealogy easy, today!</h2>
+<p>Welcome to this GEDCOM parser created by Jason and Tiaan.</p>
+<p>Now we know the first question on your mind: can I make use of this incredible tool, too?
+    Yes, you can! Simply follow these steps:
+</p>
+<ol class="round">
+    <li class="one">
+        <h5>Upload your file</h5>
+        Click the link below to do this.
+    </li>
+
+    <li class="two">
+        <h5>Let us do all the hard work</h5>
+        All you need to do is sit back and relax.
+    </li>
+
+    <li class="three">
+        <h5>Squizz through your genealogy with ease</h5>
+        Click on the individual or family whose history you wish to explore!
+    </li>
+</ol>
+
+<a href="/upload">Click here to start</a>

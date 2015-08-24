@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+
+<!--
+  The View for the Upload Page. Loads some nice images and other frills, then provides the user with file selection and upload options.
+    Any relevant validation error messages are also displayed here.
+  -->
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title Page</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<h1>Upload a GEDCOM File</h1>
+<h2>Could discovering your genealogy really be this easy?</h2>
+<p>Select the GEDCOM file (.ged) you want, and be amazed.</p>
+<p>Please note: only ASCII encoding is supported for the time being.</p>
+
+<form action="Upload/UploadAction" method="post" enctype="multipart/form-data">
+    Select file to upload:
+    <input type="file" name="ged_file" id="ged_file">
+    <input type="submit" value="Upload File" name="submit">
+    <label>@ViewBag.statusLabel</label>
+</form>

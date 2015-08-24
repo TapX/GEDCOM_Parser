@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Display";
+}
+
+<!--
+  The View for the Display Page. Loads some nice images and other frills, then outputs the relevant links for each of the header file,
+    submitter, individual and family summaries.
+  -->
+
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title Contents</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+
+<h1>View your GEDCOM File</h1>
+<h2>Without further a due, here it is!</h2>
+<p>To upload another file, click on the link at the bottom of the page.</p>
+
+@if (ViewBag.head) 
+{
+    <h3>File info</h3>
+    <h4>GEDCOM Preamble</h4>
+    <a href="Query?ID=HEAD&Tag=HEAD">GEDCOM Preamble</a>
+}
+
+@if (ViewBag.subm != null)
+{
+    <h4>Submitters:</h4>
+    foreach (var item in ViewBag.subm)
+    {
+        string link = "Query?ID=" + item + "&Tag=SUBM";
+        <a href=@link>@item</a>
+    }
+}
+
+<h3>Geneaology Data</h3>    
+@if (ViewBag.indi != null)
+{
+    <h4>Individuals</h4>
+    for (int i=0; i < ViewBag.indi2.Count; i++)
+    {
+        string link = "Query?ID=" + ViewBag.indi2[i] + "&Tag=INDI";
+        <a href=@link>@ViewBag.indi[i])</a><br/>
+    }
+}
+    
+@if (ViewBag.fam != null)
+{
+    <h4>Families</h4>
+    foreach (var item in ViewBag.fam)
+    {
+        string link = "Query?ID=" + item + "&Tag=FAM";
+        <a href=@link>@item</a><br/>
+    }
+}
+
+<h3>Want to load another?</h3>
+<a href="/Upload">Go back to upload screen</a>
+
